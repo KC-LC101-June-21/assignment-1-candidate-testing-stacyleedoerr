@@ -47,7 +47,7 @@ function gradeQuiz(candidateAnswers) {
    finalGrade = ((grade / correctAnswers.length) * 100)
     console.log(`>>> Overall Grade: ${finalGrade}% (${grade} of 5 responses correct) <<<`)
     
-      return grade;
+      return finalGrade;
 }
  
 function runProgram() {
@@ -57,7 +57,7 @@ function runProgram() {
   askQuestion();
   let grade = gradeQuiz(this.candidateAnswers);
 
-  if (grade >= 4) {
+  if (grade >= 80) {
       console.log('>>> Status: PASSED <<<');
   } else {
       console.log(">>> Status: FAILED <<<");
