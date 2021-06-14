@@ -16,8 +16,9 @@ let candidateAnswers = [];
 function askForName() {
   candidateName = input.question("Candidate Name: ");
   // TODO 1.1b: Ask for candidate's name //
-
+  return candidateName
 }
+//console.log(typeof candidateName)
 //candidateName = askForName()
 //askForName()
 //console.log(candidateName)
