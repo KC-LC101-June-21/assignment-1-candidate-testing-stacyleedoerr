@@ -13,15 +13,18 @@ let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 let candidateAnswers = [];
 
 
+candidateName = function askForName() {
+  
+  candidateName = input.question("Candidate Name: ");
+ 
+}
+ 
 function askForName() {
+  
   candidateName = input.question("Candidate Name: ");
   // TODO 1.1b: Ask for candidate's name //
-  return candidateName
+ 
 }
-//console.log(typeof candidateName)
-//candidateName = askForName()
-//askForName()
-//console.log(candidateName)
 
 function askQuestion() {
   for (let i = 0; i < questions.length; i++){
@@ -29,7 +32,6 @@ function askQuestion() {
  console.log(`Your Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]} \n`);
 }
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-//candidateAnswer = input.question(question)
 
 }
 
@@ -54,7 +56,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  
+  //candidateName = askForName();
   askQuestion();
   let grade = gradeQuiz(this.candidateAnswers);
 
@@ -64,7 +66,7 @@ function runProgram() {
       console.log(">>> Status: FAILED <<< ");
   }
 }
-
+//console.log(candidateName)
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //
 module.exports = {
