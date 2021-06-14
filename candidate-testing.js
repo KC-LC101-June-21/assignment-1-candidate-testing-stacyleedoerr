@@ -1,6 +1,6 @@
 const input = require('readline-sync');
 
-// TODO 2: modify your quiz app to ask 5 questions //
+// TODO 2: modify your quiz app to ask 5 questions /
 
 // TODO 1.1a: Define candidateName // 
 let candidateName;
@@ -14,7 +14,7 @@ let candidateAnswers = [];
 
 
 function askForName() {
-  candidateName = input.question("Candidate Name: ");
+  candidateName = input.question("Candidate Name: ") + ' ';
   // TODO 1.1b: Ask for candidate's name //
 
 }
@@ -45,7 +45,7 @@ function gradeQuiz(candidateAnswers) {
       }
     }  
    finalGrade = ((grade / correctAnswers.length) * 100)
-    console.log(`>>> Overall Grade: ${finalGrade}% (${grade} of 5 responses correct) <<<`)
+    console.log(`>>> Overall Grade: ${finalGrade}% (${grade} of 5 responses correct) <<< `)
     
       return finalGrade;
 }
@@ -58,7 +58,7 @@ function runProgram() {
   let grade = gradeQuiz(this.candidateAnswers);
 
   if (grade >= 80) {
-      console.log('>>> Status: PASSED <<<');
+      console.log('>>> Status: PASSED <<< ');
   } else {
       console.log(">>> Status: FAILED <<<");
   }
